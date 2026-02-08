@@ -1,4 +1,4 @@
-# Smart Autonomous Recording Unit (SARU) Resources
+# ARGUS Resources
 
 ### Biodiversity Monitoring Projects
 * [Arbimon](https://arbimon.rfcx.org)
