@@ -1,6 +1,5 @@
 # ARGUS: A Triple Meaning That  Embodies This System  
 
-Rare triple alignment (biology + mythology + engineering)  
 ---
 
 ## 🌿 The Three Layers of ARGUS  
