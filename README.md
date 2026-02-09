@@ -99,7 +99,7 @@ flowchart TD
 ---
 
 ## Resource-Constrained Platform Tiers
-| MCU Tier | Main Characteristic                                  | Typical Resources (Order of Magnitude) | Examples        |
+|     Tier | Main Characteristic                                  | Typical Resources (Order of Magnitude) | Examples        |
 |---------:|------------------------------------------------------|----------------------------------------|-----------------|
 | 0        | Non-ML capable microcontroller                       | \<64 KB RAM, \<50 MHz                  | AVR, Cortex-M0+ |
 | 1        | TinyML / low-end deep learning                       | 64–512 KB RAM, 50–200 MHz              | Cortex-M4      |
