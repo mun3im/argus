@@ -63,7 +63,9 @@ flowchart TD
 - **Hardware**: Cortex-M7 (Tier 2 MCU)  
 - **Task**: 10-way species classification (top-1 accuracy >92%)  
 - **Unknown species handling**: Confidence thresholding → saves audio for offline analysis  
-- **Latency**: <45 ms inference @ 480 MHz  
+- **Latency**: <45 ms inference @ 480 MHz
+- See also [mun3im/mynanet](https://github.com/mun3im/mynanet).
+
 
 ### 5. ARGUS Runtime System: Power-Optimized Execution  
 - **Hardware platform**: Arduino Portenta H7 (dual-core: M4 + M7)  
