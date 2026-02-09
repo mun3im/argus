@@ -12,13 +12,13 @@
 
 ---
 
-> *"The Great Argus displays 100 eye-like ocelli on its wings—a natural embodiment of perpetual vigilance. This system, named for this bird, now *becomes* the forest's guardian: watching with electronic eyes so the real Argus may thrive undisturbed."*
 
 ### Scientific & Cultural Resonance
 - **Biogeographic alignment**: Great Argus inhabits the *exact rainforests* where ARGUS biologgers deploy (Peninsular Malaysia, Sumatra, Borneo)
-- **Conservation symmetry**: Your system monitors biodiversity *including* species like the Great Argus—closing a poetic loop
+- **Conservation symmetry**: This system monitors biodiversity *including* species like the Great Argus—closing a poetic loop
 - **Indigenous connection**: Known as *"Kuang Raja"* (King Pheasant) in Malay—honors local ecological knowledge
 
 ---
 
+> *"The Great Argus displays 100 eye-like ocelli on its wings—a natural embodiment of perpetual vigilance. This system, named for this bird, now *becomes* the forest's guardian: watching with electronic eyes so the real Argus may thrive undisturbed."*
 > Like its namesake bird watching over the canopy, ARGUS stands guard for biodiversity—ensuring no bird call goes unheard.
