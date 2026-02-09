@@ -40,7 +40,8 @@ flowchart TD
 - **Binary labels**: Bird present / No bird (background noise only)  
 - **Geographic coverage**: Diverse habitats across Southeast Asia, centered around Malaysia  
 - **Purpose**: Train gatekeeper to detect *any bird activity* with ultra-high recall  
-- **Critical design**: Optimized for **false negative mitigation**—missing a bird = permanently lost biological data  
+- **Critical design**: Optimized for **false negative mitigation**—missing a bird = permanently lost biological data
+- See also [mun3im/mybad](https://github.com/mun3im/mybad)
 
 ### 2. MyBAD-Gatekeeper: Tier 1 Ultra-Lightweight CNN  
 - **Architecture**: Custom 4-layer CNN (<8 KB INT8)  
@@ -48,14 +49,16 @@ flowchart TD
 - **Hardware**: Cortex-M4 (Tier 1 MCU)  
 - **Optimization target**: **≥99% recall** (precision secondary)  
 - **Latency**: <8 ms inference @ 240 MHz  
-- **Power impact**: Enables 3-second wake cycles with <50 µA average current draw  
+- **Power impact**: Enables 3-second wake cycles with <50 µA average current draw
+- See also [mun3im/gatekeeper](https://github.com/mun3im/mybad/tree/main/gatekeeper)
 
 ### 3. SEA-bird Dataset: Species Identification Reference  
 - **6,000 labeled 3-second clips** of **10 common Southeast Asian bird species**  
 - **Species coverage**: Tailored to regional biodiversity hotspots  
 - **Annotation**: Verified by ornithologists; includes vocalization variants  
 - **Purpose**: Train MynaNet classifier for species-level identification  
-- **Complementarity**: Works *only after* gatekeeper confirms bird presence  
+- **Complementarity**: Works *only after* gatekeeper confirms bird presence
+- See also [mun3im/seabird](https://github.com/mun3im/seabird/)
 
 ### 4. MynaNet: Tier 2 High-Accuracy Classifier  
 - **Architecture**: Depthwise Separable CNN + Squeeze-Excitation + Attention  
