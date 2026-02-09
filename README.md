@@ -98,6 +98,19 @@ flowchart TD
 
 ---
 
+## Resource-Constrained Platform Tiers
+| MCU Tier | Main Characteristic                                  | Typical Resources (Order of Magnitude) | Examples        |
+|---------:|------------------------------------------------------|----------------------------------------|-----------------|
+| 0        | Non-ML capable microcontroller                       | \<64 KB RAM, \<50 MHz                  | AVR, Cortex-M0+ |
+| 1        | TinyML / low-end deep learning                       | 64–512 KB RAM, 50–200 MHz              | Cortex-M4      |
+| 2        | High-end MCU deep learning (TinyML++)                | 512 KB–2 MB RAM, 200–600 MHz           | Cortex-M7      |
+| 3        | Edge AI on general-purpose SBC                       | 1–8 GB RAM, multi-core GHz CPU         | Raspberry Pi   |
+| 4        | Edge AI with hardware acceleration                   | 4–8 GB RAM + GPU / NPU                 | Jetson Nano    |
+
+Proposed tiering to be published in future SLR paper.
+
+---
+
 ## ✅ Recommended Improvements (Optional but Impactful)
 
 ### 1. Add Pre-Trigger Audio Buffering (Critical for Data Integrity)
