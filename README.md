@@ -152,4 +152,4 @@ if (rms < ENERGY_THRESHOLD) {
 ---
 
 *ARGUS: Autonomous Remote avian Monitoring System • SEAbird Project • February 2026*  
-*Deployed on Portenta H7 with FreeRTOS • Field-tested in Southeast Asian rainforests*
+* To be deployed on Portenta H7 with FreeRTOS • To be field-tested in Southeast Asian rainforests*
