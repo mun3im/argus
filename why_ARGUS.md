@@ -1,6 +1,8 @@
 # ARGUS: A Triple Meaning That  Embodies This System  
 
 ---
+Autonomous Recognition Gatekeeper for Ubiquitous Species monitoring
+---
 
 ## 🌿 The Three Layers of ARGUS  
 
