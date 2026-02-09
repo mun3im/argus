@@ -2,13 +2,13 @@
 
 ---
 
-*A*utonomous *R*emote *G*uardian for *U*ltra-low-power *S*pecies monitoring
+**A**utonomous **R**emote **G**uardian for **U**ltra-low-power **S**pecies monitoring
 
 ---
 
 ## 🌿 The Three Layers of ARGUS  
 
-| Layer | Meaning | Significance for SEAbird Project |
+| Layer | Meaning | Significance  |
 |-------|---------|----------------------------------|
 | **Ornithological** | **Great Argus** (*Argusianus argus*)<br>• Spectacular pheasant native to Malay Peninsula & Borneo<br>• Males display 100+ "eyes" on wing feathers during courtship<br>• IUCN Near Threatened (habitat loss) | ✅ **Native to Malaysia, target deployment region**<br>✅ **"Hundred eyes" mirrors gatekeeper vigilance**<br>✅ **Conservation flagship species**—your system protects birds like this |
 | **Mythological** | **Argus Panoptes**<br>Greek guardian with 100 eyes who never slept | ✅ **Perpetual vigilance** = M4 gatekeeper's 3s wake cycles<br>✅ **Eyes that never all close** = tiered architecture (M4 always watching) |
