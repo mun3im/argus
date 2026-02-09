@@ -1,6 +1,6 @@
 
 ---
-**ARGUS** (_Autonomous Remote Guardian for Ultra-low-power Species monitoring_) is a two-tier biologger inspired by Argus Panoptes—the hundred-eyed guardian who never slept. Its **gatekeeper** (Cortex-M4) maintains perpetual vigilance at ultra-low power, awakening the **classifier** (Cortex-M7) only upon bird detection. This architecture ensures ≥99% recall—guaranteeing that no biological event is lost—while enabling multi-year field deployment on a single battery.
+**ARGUS** (_Autonomous Remote Guardian for Ultra-low-power Species monitoring_) is a two-tier biologger inspired by Argus Panoptes—the hundred-eyed guardian who never slept. Its **gatekeeper** (Cortex-M4) maintains perpetual vigilance at ultra-low power, awakening the **classifier** (Cortex-M7) only upon bird detection. This architecture ensures ≥99% recall—guaranteeing that no biological event is lost—while enabling months of field deployment on a single battery.
 
 ---
 
