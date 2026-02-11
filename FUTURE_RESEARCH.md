@@ -1,6 +1,4 @@
-# FUTURE_RESEARCH.md
-
-## ARGUS System Enhancement Roadmap
+# ARGUS System Enhancement Roadmap
 
 This document outlines technical upgrades that can strengthen ARGUS in
 robustness, biological fidelity, and long-term autonomy.
