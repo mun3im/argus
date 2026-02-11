@@ -26,16 +26,3 @@ ARGUS represents three aligned dimensions:
 | **Mythological** | **Argus Panoptes** | • Hundred-eyed Greek guardian  <br>• Never fully slept | Perpetual vigilance  <br>Tiered architecture — not all “eyes” close at once |
 | **Engineering** | **ARGUS Acronym** | **A**utonomous  <br>**R**eal-time  <br>**G**uardian  <br>for  <br>**U**ltra-low-power  <br>**S**pecies monitoring | Direct architectural description  <br>Gatekeeper-centric philosophy |
 
-
-------------------------------------------------------------------------
-
-## License
-
-MIT
-
-------------------------------------------------------------------------
-
-## Citation
-
-If you use ARGUS in academic work, please cite the associated
-publication (to be added).
