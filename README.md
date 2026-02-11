@@ -111,7 +111,7 @@ Proposed tiering to be published in future SLR paper.
 
 ---
 
-## ✅ Recommended Improvements (Optional but Impactful)
+## ✅ Potential Enhancements
 
 ### 1. Add Pre-Trigger Audio Buffering (Critical for Data Integrity)
 **Current gap**: Gatekeeper analyzes isolated 3s windows. Short bird calls (<1s) occurring *at window boundaries* may be truncated or missed entirely.
