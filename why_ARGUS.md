@@ -47,30 +47,11 @@ ARGUS uses an asymmetric dual-core architecture:
 
 ARGUS represents three aligned dimensions:
 
-### 1. Ornithological
-
-**Great Argus (Argusianus argus)**\
-- Native to Peninsular Malaysia, Sumatra, and Borneo\
-- Males display 100+ eye-like ocelli on their wings\
-- IUCN Near Threatened (habitat loss)
-
-In Malay, it is known as *Kuang Raja* (King Pheasant).\
-Its "Bulu Seribu Mata" (thousand-eyed feathers) symbolize vigilance.
-
-### 2. Mythological
-
-**Argus Panoptes** -- the hundred-eyed Greek guardian who never slept.\
-Like the mythological Argus, the system never fully sleeps --- not all
-eyes close at once.
-
-### 3. Engineering
-
-**A**utonomous\
-**R**eal-time\
-**G**uardian\
-for\
-**U**ltra-low-power\
-**S**pecies monitoring
+| Dimension        | Reference | Key Points | Symbolic Meaning for the System |
+|------------------|------------|------------|----------------------------------|
+| **Ornithological** | **Great Argus (*Argusianus argus*)** | • Native to Peninsular Malaysia, Sumatra, Borneo  <br>• Males display 100+ eye-like ocelli  <br>• IUCN Near Threatened (habitat loss)  <br>• Known in Malay as *Kuang Raja* (King Pheasant)  <br>• "Bulu Seribu Mata" (thousand-eyed feathers) | Native ecological anchor  <br>Embodiment of vigilance  <br>Conservation relevance |
+| **Mythological** | **Argus Panoptes** | • Hundred-eyed Greek guardian  <br>• Never fully slept | Perpetual vigilance  <br>Tiered architecture — not all “eyes” close at once |
+| **Engineering** | **ARGUS Acronym** | **A**utonomous  <br>**R**eal-time  <br>**G**uardian  <br>for  <br>**U**ltra-low-power  <br>**S**pecies monitoring | Direct architectural description  <br>Gatekeeper-centric philosophy |
 
 The acronym directly reflects the system's architectural philosophy.
 
