@@ -225,7 +225,17 @@ if (rms < ENERGY_THRESHOLD) {
 ✅ **Field resilience**: Unknown species trigger audio saving—enables continuous dataset growth  
 ✅ **Hardware-aware design**: Matches model complexity to MCU capabilities (M4 for detection, M7 for classification)  
 
----
 
-*ARGUS: Autonomous Remote avian Monitoring System • SEAbird Project • February 2026*  
-*To be deployed on Portenta H7 with FreeRTOS • To be field-tested in Southeast Asian rainforests*
+------------------------------------------------------------------------
+
+## License
+
+MIT
+
+------------------------------------------------------------------------
+
+## Citation
+
+If you use ARGUS in academic work, please cite the associated
+publication (to be added).
+
