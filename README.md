@@ -6,6 +6,31 @@
 
 ## System Architecture  
 
+ARGUS uses an asymmetric dual-core architecture:
+
+### Tier 1 -- Gatekeeper (Cortex-M4)
+
+-   Always listening at ultra-low power\
+-   Performs lightweight bird activity detection\
+-   Operates in continuous short wake cycles\
+-   Activates Tier 2 only when needed
+
+### Tier 2 -- Classifier (Cortex-M7)
+
+-   Wakes only upon bird detection\
+-   Performs species-level inference\
+-   Logs metadata or stores audio\
+-   Returns system to low-power state
+
+### Design Goals
+
+-   ≥99% recall of biological events\
+-   Multi-year field deployment\
+-   Minimal energy waste\
+-   No missed detections due to aggressive power gating
+
+
+
 ```mermaid
 flowchart TD
     A[System Sleep<br>Ultra-Low Power<br>&lt;10 µA] --> B[Wake Tier 1<br>Every 3s via RTC]
@@ -108,6 +133,44 @@ flowchart TD
 | 4        | Edge AI with hardware acceleration                   | 4–8 GB RAM + GPU / NPU                 | Jetson Nano    |
 
 Proposed tiering to be published in future SLR paper.
+
+
+------------------------------------------------------------------------
+
+## Deployment Context
+
+ARGUS is designed for biodiversity monitoring in Southeast Asian
+rainforests, where:
+
+-   Power access is limited\
+-   Long-term autonomous operation is required\
+-   High recall is critical\
+-   Edge inference reduces storage and transmission load
+
+The system acts as a technological guardian --- electronic vigilance
+that protects real ecosystems.
+
+------------------------------------------------------------------------
+
+## Key Features
+
+-   Two-tier low-power architecture\
+-   Edge-based bird activity detection\
+-   On-demand species classification\
+-   Designed for embedded microcontroller platforms\
+-   Optimized for rainforest acoustic environments
+
+------------------------------------------------------------------------
+
+## Research Direction
+
+ARGUS is intended as a platform for:
+
+-   Embedded machine learning for ecoacoustics\
+-   Ultra-low-power edge AI\
+-   Biodiversity conservation technology\
+-   Long-duration field biologging
+
 
 ---
 
