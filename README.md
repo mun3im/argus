@@ -55,6 +55,9 @@ ARGUS runs on a dual-core microcontroller (Cortex-M4 + Cortex-M7).
 
 **Priority:** Accuracy and efficiency.
 
+![ARGUS System Architecture](./argus_arch.svg)
+
+
 ------------------------------------------------------------------------
 
 ## Core Components
