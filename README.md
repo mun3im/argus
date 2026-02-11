@@ -96,13 +96,9 @@ https://github.com/mun3im/seabird
 ### 4. MynaNet (Tier 2 Classifier)
 
 -   Depthwise Separable CNN + SE + Attention
-
 -   Input: 80×300 mel spectrogram (`n_fft=512`)
-
 -   92% top-1 accuracy
-
 -   <45 ms inference on Cortex-M7
-
 -   Unknown species → audio saved for review
 
 https://github.com/mun3im/mynanet
