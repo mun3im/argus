@@ -9,7 +9,7 @@ Inspired by *Argus Panoptes* --- the guardian who never slept --- ARGUS
 listens continuously at low power and activates high-intelligence
 processing only when a biological event occurs.
 
-**Goal:** ≥99% recall of bird activity while enabling months of
+**Goal:** >98% recall of bird activity while enabling months of
 deployment on a single battery.
 
 ------------------------------------------------------------------------
@@ -77,7 +77,7 @@ https://github.com/mun3im/mybad
 ### 2. MyBAD-Gatekeeper
 
 -   Custom 4-layer CNN (<8 KB INT8)
--   Input: 16×184 mel spectrogram (`n_fft=256`)
+-   Input: 16×184 mel spectrogram (`n_fft=512`)
 -   <8 ms inference on Cortex-M4
 -   ≥99% recall target
 
@@ -96,7 +96,7 @@ https://github.com/mun3im/seabird
 ### 4. MynaNet (Tier 2 Classifier)
 
 -   Depthwise Separable CNN + SE + Attention
--   Input: 80×300 mel spectrogram (`n_fft=512`)
+-   Input: 80×300 mel spectrogram (`n_fft=1024`)
 -   92% top-1 accuracy
 -   <45 ms inference on Cortex-M7
 -   Unknown species → audio saved for review
