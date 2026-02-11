@@ -1,28 +1,124 @@
-# ARGUS: A Triple Meaning That  Embodies This System  
+# ARGUS
 
----
+## Autonomous Real-time Guardian for Ultra-low-power Species Monitoring
 
-**A**utonomous **R**eal-time **G**uardian for **U**ltra-low-power **S**pecies monitoring
+------------------------------------------------------------------------
 
----
+## Overview
 
-## 🌿 The Three Layers of ARGUS  
+**ARGUS** is a two-tier ultra-low-power biologging system designed for
+long-term autonomous bird monitoring in tropical rainforest
+environments.
 
-| Layer | Meaning | Significance  |
-|-------|---------|----------------------------------|
-| **Ornithological** | **Great Argus** (*Argusianus argus*)<br>• Spectacular pheasant native to Malay Peninsula & Borneo<br>• Males display 100+ "eyes" on wing feathers during courtship<br>• IUCN Near Threatened (habitat loss) | ✅ **Native to Malaysia, target deployment region**<br>✅ **"Hundred eyes" mirrors gatekeeper vigilance**<br>✅ **Conservation flagship species**—your system protects birds like this |
-| **Mythological** | **Argus Panoptes**<br>Greek guardian with 100 eyes who never slept | ✅ **Perpetual vigilance** = M4 gatekeeper's 3s wake cycles<br>✅ **Eyes that never all close** = tiered architecture (M4 always watching) |
-| **Engineering** | **A**utonomous **R**eal-time **G**uardian for **U**ltra-low-power **S**pecies monitoring | ✅ **Gatekeeper-centric** architecture explicitly named<br>✅ Technically precise yet poetic |
+Inspired by vigilance in nature and mythology, ARGUS combines an
+always-on **gatekeeper** with an on-demand **classifier**, ensuring high
+recall of biological events while maintaining multi-year battery life.
 
----
+------------------------------------------------------------------------
 
+## System Architecture
 
-### Scientific & Cultural Resonance
-- **Biogeographic alignment**: Great Argus inhabits the *exact rainforests* where ARGUS biologgers deploy (Peninsular Malaysia, Sumatra, Borneo)
-- **Conservation symmetry**: This system monitors biodiversity *including* species like the Great Argus—closing a poetic loop
-- **Indigenous connection**: Known as *"Kuang Raja"* (King Pheasant) in Malay—honors local ecological knowledge
+ARGUS uses an asymmetric dual-core architecture:
 
----
+### Tier 1 -- Gatekeeper (Cortex-M4)
 
-> *"The Great Argus displays 100 eye-like ocelli on its wings—a natural embodiment of perpetual vigilance. This system, named for this bird, now *becomes* the forest's guardian: watching with electronic eyes so the real Argus may thrive undisturbed."*
-> Like its namesake bird watching over the canopy, ARGUS stands guard for biodiversity—ensuring no bird call goes unheard.
+-   Always listening at ultra-low power\
+-   Performs lightweight bird activity detection\
+-   Operates in continuous short wake cycles\
+-   Activates Tier 2 only when needed
+
+### Tier 2 -- Classifier (Cortex-M7)
+
+-   Wakes only upon bird detection\
+-   Performs species-level inference\
+-   Logs metadata or stores audio\
+-   Returns system to low-power state
+
+### Design Goals
+
+-   ≥99% recall of biological events\
+-   Multi-year field deployment\
+-   Minimal energy waste\
+-   No missed detections due to aggressive power gating
+
+------------------------------------------------------------------------
+
+## Why the Name "ARGUS"?
+
+ARGUS represents three aligned dimensions:
+
+### 1. Ornithological
+
+**Great Argus (Argusianus argus)**\
+- Native to Peninsular Malaysia, Sumatra, and Borneo\
+- Males display 100+ eye-like ocelli on their wings\
+- IUCN Near Threatened (habitat loss)
+
+In Malay, it is known as *Kuang Raja* (King Pheasant).\
+Its "Bulu Seribu Mata" (thousand-eyed feathers) symbolize vigilance.
+
+### 2. Mythological
+
+**Argus Panoptes** -- the hundred-eyed Greek guardian who never slept.\
+Like the mythological Argus, the system never fully sleeps --- not all
+eyes close at once.
+
+### 3. Engineering
+
+**A**utonomous\
+**R**eal-time\
+**G**uardian\
+for\
+**U**ltra-low-power\
+**S**pecies monitoring
+
+The acronym directly reflects the system's architectural philosophy.
+
+------------------------------------------------------------------------
+
+## Deployment Context
+
+ARGUS is designed for biodiversity monitoring in Southeast Asian
+rainforests, where:
+
+-   Power access is limited\
+-   Long-term autonomous operation is required\
+-   High recall is critical\
+-   Edge inference reduces storage and transmission load
+
+The system acts as a technological guardian --- electronic vigilance
+that protects real ecosystems.
+
+------------------------------------------------------------------------
+
+## Key Features
+
+-   Two-tier low-power architecture\
+-   Edge-based bird activity detection\
+-   On-demand species classification\
+-   Designed for embedded microcontroller platforms\
+-   Optimized for rainforest acoustic environments
+
+------------------------------------------------------------------------
+
+## Research Direction
+
+ARGUS is intended as a platform for:
+
+-   Embedded machine learning for ecoacoustics\
+-   Ultra-low-power edge AI\
+-   Biodiversity conservation technology\
+-   Long-duration field biologging
+
+------------------------------------------------------------------------
+
+## License
+
+MIT
+
+------------------------------------------------------------------------
+
+## Citation
+
+If you use ARGUS in academic work, please cite the associated
+publication (to be added).
