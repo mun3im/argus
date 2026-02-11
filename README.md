@@ -54,6 +54,7 @@ ARGUS runs on a dual-core microcontroller (Cortex-M4 + Cortex-M7).
 -   Returns system to low-power state
 
 **Priority:** Accuracy and efficiency.
+------------------------------------------------------------------------
 
 ![ARGUS System Architecture](./argus_arch.svg)
 
