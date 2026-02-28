@@ -83,13 +83,13 @@ https://github.com/mun3im/mybad
 
 ------------------------------------------------------------------------
 
-### 3. SEA-bird Dataset
+### 3. MyGardenBird Dataset
 
 -   6,000 labeled clips
 -   10 Southeast Asian species
 -   Ornithologist-verified
 
-https://github.com/mun3im/seabird
+https://github.com/mun3im/mygardenbird
 
 ------------------------------------------------------------------------
 
