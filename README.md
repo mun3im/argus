@@ -24,7 +24,7 @@ Field monitoring systems face a difficult trade-off:
 
 ARGUS solves this with asymmetric intelligence:
 
--   A lightweight **Gatekeeper** listens continuously
+-   A lightweight **Sentinel** listens continuously
 -   A powerful **Classifier** wakes only when needed
 
 No missed birds. No wasted power.
@@ -35,7 +35,7 @@ No missed birds. No wasted power.
 
 ARGUS runs on a dual-core microcontroller (Cortex-M4 + Cortex-M7).
 
-### Tier 1 --- Gatekeeper (Cortex-M4)
+### Tier 1 --- Sentinel (Cortex-M4)
 
 -   Always listening at ultra-low power
 -   Lightweight bird activity detection
@@ -74,7 +74,7 @@ https://github.com/mun3im/mybad
 
 ------------------------------------------------------------------------
 
-### 2. MyBAD-Gatekeeper
+### 2. MyBADnet (Tier 1 Bird Activity Detector)
 
 -   Custom 4-layer CNN (<8 KB INT8)
 -   Input: 16×184 mel spectrogram (`n_fft=512`)
