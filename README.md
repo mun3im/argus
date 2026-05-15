@@ -85,8 +85,8 @@ https://github.com/mun3im/mybad
 
 ### 3. MyGardenBird Dataset
 
--   6,000 labeled clips
--   10 Southeast Asian species
+-   7,200 labeled clips
+-   12 Southeast Asian species
 -   Ornithologist-verified
 
 https://github.com/mun3im/mygardenbird
