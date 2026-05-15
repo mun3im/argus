@@ -96,7 +96,7 @@ https://github.com/mun3im/mygardenbird
 ### 4. MynaNet (Tier 2 Classifier)
 
 -   Depthwise Separable CNN + SE + Attention
--   Input: 80×300 mel spectrogram (`n_fft=1024`)
+-   Input: 64×300 mel spectrogram (`n_fft=1024`)
 -   92% top-1 accuracy
 -   <45 ms inference on Cortex-M7
 -   Unknown species → audio saved for review
