@@ -64,17 +64,17 @@ ARGUS runs on a dual-core microcontroller (Cortex-M4 + Cortex-M7).
 
 ## Core Components
 
-### 1. MyBAD Dataset
+### 1. SEABAD Dataset
 
 -   50,000 labeled 3-second clips (16 kHz)
 -   Binary: Bird / No Bird
 -   Optimized to prevent false negatives
 
-https://github.com/mun3im/mybad
+https://github.com/mun3im/seabad
 
 ------------------------------------------------------------------------
 
-### 2. MyBADnet (Tier 1 Bird Activity Detector)
+### 2. DrongoNet (Tier 1 Bird Activity Detector)
 
 -   Custom 4-layer CNN (<8 KB INT8)
 -   Input: 16×184 mel spectrogram (`n_fft=512`)
