@@ -1,6 +1,6 @@
 # ARGUS
 
-**Asymmetric Real-time Gatekeeper for Ultra-efficient Species Monitoring**
+**Asymmetric Real-time Guardian for Ultra-efficient Species Monitoring**
 
 ARGUS is an ultra-efficient, two-tier acoustic biologger designed for
 long-term wildlife monitoring in remote environments.
