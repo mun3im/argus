@@ -1,6 +1,6 @@
 # ARGUS
 
-## Autonomous Real-time Guardian for Ultra-low-power Species Monitoring
+## Asymmetric Real-time Gatekeeper for Ultra-efficient Species Monitoring
 
 ------------------------------------------------------------------------
 
