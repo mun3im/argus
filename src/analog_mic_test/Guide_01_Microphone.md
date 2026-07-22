@@ -201,15 +201,15 @@ The microphone is the first stage in every inference sketch:
 MAX4466 mic → analogRead(A0/A1) → audioBuffer[48000] → Mel Spectrogram → TFLite Inference
 ```
 
-All production sketches (MyDrongo, MyNano, BAD_16Mels, CascadeArgus) use the same `captureAudio()` function to fill a 48,000-sample `int16_t` buffer at exactly 16 kHz using a busy-wait timing loop.
+All production sketches (Drongonet, DrongoNet_Nano, DrongoNet_Edge, ARGUS) use the same `captureAudio()` function to fill a 48,000-sample `int16_t` buffer at exactly 16 kHz using a busy-wait timing loop.
 
 ### 4.2 The `captureAudio()` Function
 
-> **Source reference:** [`src/BAD_tiny_M7/MyDrongo/MyDrongo.ino`](../src/BAD_tiny_M7/MyDrongo/MyDrongo.ino) — lines 535–547
+> **Source reference:** [`src/DrongoNet/DrongoNet_Micro/Drongonet.ino`](../src/DrongoNet/DrongoNet_Micro/Drongonet.ino) — lines 535–547
 
 ```cpp
 // ── Audio capture constants ───────────────────────────────────────────
-const int MIC_PIN           = A1;     // Analog pin (A0 in CascadeArgus)
+const int MIC_PIN           = A1;     // Analog pin (A0 in ARGUS)
 const int SAMPLE_RATE       = 16000;  // Hz — matches model training
 const int AUDIO_DURATION_MS = 3000;   // 3-second capture window
 const int BUFFER_SIZE       = (SAMPLE_RATE * AUDIO_DURATION_MS) / 1000; // 48 000
@@ -304,11 +304,11 @@ if (rms < RMS_THRESHOLD) {
 | Sketch | Mic Pin | Notes |
 |---|---|---|
 | `analog_mic_test.ino` | `A1` | Smoke test only |
-| `BAD_tiny_M7.ino` | `A0` | Minimal inference test |
-| `MyDrongo.ino` | `A1` | Production BAD pipeline |
-| `MyNano.ino` | `A1` | Nano profiling build |
-| `BAD_16Mels.ino` | `A1` | 80-mel profiling build |
-| `CascadeArgus.ino` | `A0` | Full cascade deployment |
+| `DrongoNet_Nano.ino` | `A0` | Minimal inference test |
+| `Drongonet.ino` | `A1` | Production BAD pipeline |
+| `DrongoNet_Nano.ino` | `A1` | Nano profiling build |
+| `DrongoNet_Edge.ino` | `A1` | 80-mel profiling build |
+| `ARGUS.ino` | `A0` | Full cascade deployment |
 
 ---
 
@@ -316,7 +316,7 @@ if (rms < RMS_THRESHOLD) {
 
 ### 5.1 RMS Threshold per Environment
 
-Calibrate `RMS_THRESHOLD` by running **MyDrongo.ino** or **MyNano.ino** and observing the `RMS=` value printed in silence:
+Calibrate `RMS_THRESHOLD` by running **Drongonet.ino** or **DrongoNet_Nano.ino** and observing the `RMS=` value printed in silence:
 
 | Environment | Typical silent RMS | Recommended threshold |
 |---|---|---|

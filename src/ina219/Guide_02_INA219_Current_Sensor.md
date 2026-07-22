@@ -80,10 +80,10 @@ When prompted, also install **Adafruit BusIO** — it is a required dependency f
 ```
 
 Both headers are included in every production sketch in this project:
-- [`src/BAD_tiny_M7/MyDrongo/MyDrongo.ino`](../src/BAD_tiny_M7/MyDrongo/MyDrongo.ino)
-- [`src/BAD_tiny_M7/MyNano/MyNano.ino`](../src/BAD_tiny_M7/MyNano/MyNano.ino)
-- [`src/BAD_tiny_M7/BAD_16Mels/BAD_16Mels.ino`](../src/BAD_tiny_M7/BAD_16Mels/BAD_16Mels.ino)
-- [`src/CascadeArgus/CascadeArgus.ino`](../src/CascadeArgus/CascadeArgus.ino)
+- [`src/DrongoNet/DrongoNet_Micro/Drongonet.ino`](../src/DrongoNet/DrongoNet_Micro/Drongonet.ino)
+- [`src/DrongoNet/DrongoNet_Nano/DrongoNet_Nano.ino`](../src/DrongoNet/DrongoNet_Nano/DrongoNet_Nano.ino)
+- [`src/DrongoNet/DrongoNet_Edge/DrongoNet_Edge.ino`](../src/DrongoNet/DrongoNet_Edge/DrongoNet_Edge.ino)
+- [`src/ARGUS/ARGUS.ino`](../src/ARGUS/ARGUS.ino)
 
 ### 2.3 I²C Initialisation
 
@@ -230,7 +230,7 @@ All production sketches use the same three-part energy accounting approach. The 
 Energy (µJ) = Power (mW) × Time (µs) / 1000
 ```
 
-> **Source reference:** [`src/BAD_tiny_M7/MyNano/MyNano.ino`](../src/BAD_tiny_M7/MyNano/MyNano.ino) — power and energy section
+> **Source reference:** [`src/DrongoNet/DrongoNet_Nano/DrongoNet_Nano.ino`](../src/DrongoNet/DrongoNet_Nano/DrongoNet_Nano.ino) — power and energy section
 
 ### 4.2 Global State Variables
 
@@ -366,7 +366,7 @@ float inferUs = DWT_US(inferCycles);
 Energy (µJ) = Power (mW) × Time (µs) / 1000
 ```
 
-**Example from MyNano.ino Serial output:**
+**Example from DrongoNet_Nano.ino Serial output:**
 ```
 ─────────── Power & Energy ──────────────
   Bus Voltage   : 3.285 V

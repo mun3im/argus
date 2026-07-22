@@ -128,7 +128,7 @@ Confirm that the DrongoNet model loads from Flash, the tensor arena allocates wi
 
 ### 3.2 Smoke Test Sketch
 
-> **Source file:** [`src/BAD_tiny_M7/BAD_tiny_M7.ino`](../src/BAD_tiny_M7/BAD_tiny_M7.ino)
+> **Source file:** [`src/DrongoNet/DrongoNet_Nano/DrongoNet_Nano.ino`](../src/DrongoNet/DrongoNet_Nano/DrongoNet_Nano.ino)
 
 This sketch uses a simplified RMS-based mel approximation (not the full CMSIS-DSP pipeline) to validate the inference stack in isolation from the DSP complexity.
 
@@ -276,7 +276,7 @@ void loop() {
 
 ### 3.3 How to Run
 
-1. Open `src/BAD_tiny_M7/BAD_tiny_M7.ino` in Arduino IDE.
+1. Open `src/DrongoNet/DrongoNet_Nano/DrongoNet_Nano.ino` in Arduino IDE.
 2. Confirm `BAD_tiny_model.h` is in the **same folder** as the `.ino` file.
 3. **Tools → Board → Arduino Portenta H7 (M7 core)**
 4. **Upload** → open **Serial Monitor** at **115200 baud**.
@@ -315,12 +315,14 @@ silent | P(bird)=0.1021 P(none)=0.8979
 ### 4.1 Production Sketch Reference
 
 The full production implementation with hardware-accelerated FFT is:
-- **MyDrongo.ino** — drongonet-micro (16-mel, folded model)
-- **MyNano.ino** — drongonet-nano (16-mel, explicit quantize/dequantize nodes)
+- **DrongoNet_Micro.ino** — drongonet-micro (16-mel, folded model)
+- **DrongoNet_Nano.ino** — drongonet-nano (16-mel, explicit quantize/dequantize nodes)
+- **DrongoNet_Edge.ino** — drongonet-nano (80-mel, explicit quantize/dequantize nodes)
 
 > **Source files:**  
-> [`src/BAD_tiny_M7/MyDrongo/MyDrongo.ino`](../src/BAD_tiny_M7/MyDrongo/MyDrongo.ino)  
-> [`src/BAD_tiny_M7/MyNano/MyNano.ino`](../src/BAD_tiny_M7/MyNano/MyNano.ino)
+> [`src/DrongoNet/DrongoNet_Micro/Drongonet.ino`](../src/DrongoNet/DrongoNet_Micro/Drongonet.ino)  
+> [`src/DrongoNet/DrongoNet_Nano/ DrongoNet_Nano.ino`](../src/DrongoNet/DrongoNet_Nano/DrongoNet_Nano.ino)
+> [`src/DrongoNet/DrongoNet_Edge/DrongoNet_Edge.ino`](../src/DrongoNet/DrongoNet_Edge/DrongoNet_Edge.ino)
 
 ### 4.2 Op Resolver — Micro vs Nano
 
@@ -354,7 +356,7 @@ resolver.AddSoftmax();         // opcode  25 v2
 resolver.AddDequantize();      // opcode   6 v2 — REQUIRED
 ```
 
-> **Why not AllOpsResolver for DrongoNet?** `AllOpsResolver` links every CMSIS-NN kernel (~70 ops) into the binary, adding ~150–250 KB of Flash. `MicroMutableOpResolver` registers only the ops the model actually uses, saving Flash for the larger MynaNet model in CascadeArgus.
+> **Why not AllOpsResolver for DrongoNet?** `AllOpsResolver` links every CMSIS-NN kernel (~70 ops) into the binary, adding ~150–250 KB of Flash. `MicroMutableOpResolver` registers only the ops the model actually uses, saving Flash for the larger MynaNet model in ARGUS.
 
 ### 4.3 CMSIS-DSP FFT Mel Spectrogram
 

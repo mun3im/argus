@@ -14,7 +14,7 @@
 1. [Model Overview](#1-model-overview)
 2. [Library Installation](#2-library-installation)
 3. [Smoke Test — MynaNet Inference from a Pre-Computed Header](#3-smoke-test--mynanet-inference-from-a-pre-computed-header)
-4. [Integration — Full DS-CNN Pipeline in CascadeArgus](#4-integration--full-ds-cnn-pipeline-in-cascadeargus)
+4. [Integration — Full DS-CNN Pipeline in ARGUS](#4-integration--full-ds-cnn-pipeline-in-argus)
 5. [SDRAM Memory Architecture](#5-sdram-memory-architecture)
 6. [Output Decoding — Top-K Species Extraction](#6-output-decoding--top-k-species-extraction)
 7. [Generating Input Headers on Desktop (audio_feeding.py)](#7-generating-input-headers-on-desktop)
@@ -126,9 +126,9 @@ MynaNet's 2 MB tensor arena exceeds on-chip AXI SRAM. It must be allocated from 
 #include <SDRAM.h>   // Bundled with Arduino Mbed OS Portenta board package
 ```
 
-### 2.4 Flash Split — REQUIRED for CascadeArgus
+### 2.4 Flash Split — REQUIRED for ARGUS
 
-CascadeArgus loads both DrongoNet (~5 KB) and MynaNet (~267 KB) simultaneously. The combined binary exceeds the default 1 MB M7 Flash partition.
+ARGUS loads both DrongoNet (~5 KB) and MynaNet (~267 KB) simultaneously. The combined binary exceeds the default 1 MB M7 Flash partition.
 
 **Required setting:**
 ```
@@ -377,13 +377,13 @@ Both headers are available in [`src/MynaNet/`](../src/MynaNet/).
 
 ---
 
-## 4. Integration — Full DS-CNN Pipeline in CascadeArgus
+## 4. Integration — Full DS-CNN Pipeline in ARGUS
 
 ### 4.1 System Position
 
-In CascadeArgus, MynaNet runs **only when DrongoNet confirms bird activity** (cascade gate). MynaNet is never invoked for silent or background-noise windows — saving ~100 ms + ~80 mJ per cycle.
+In ARGUS, MynaNet runs **only when DrongoNet confirms bird activity** (cascade gate). MynaNet is never invoked for silent or background-noise windows — saving ~100 ms + ~80 mJ per cycle.
 
-> **Source file:** [`src/CascadeArgus/CascadeArgus.ino`](../src/CascadeArgus/CascadeArgus.ino)
+> **Source file:** [`src/ARGUS/ARGUS.ino`](../src/ARGUS/ARGUS.ino)
 
 ### 4.2 MynaNet Mel Spectrogram (N=512, 64 bins)
 
@@ -409,7 +409,7 @@ void initMynaFFT() {
   arm_rfft_fast_init_f32(&fftInstanceMyna, 512);
 
   // Pre-bake 64-bin triangular filterbank weights
-  // (uses mynanet_mel_tables_64.h — loaded from mel_tables.h in CascadeArgus)
+  // (uses mynanet_mel_tables_64.h — loaded from mel_tables.h in ARGUS)
   int offset = 0;
   for (int m = 0; m < 64; m++) {
     // ... (same filterbank baking logic as DrongoNet, but with 64 filters)
@@ -475,7 +475,7 @@ void computeMynanetMel(int16_t *audio, int audioLen, float *melOut) {
 }
 ```
 
-### 4.4 MynaNet Inference in CascadeArgus Loop
+### 4.4 MynaNet Inference in ARGUS Loop
 
 ```cpp
 // ── Runs only when DrongoNet avgScore > BAD_AVG_THRESHOLD ────────────
